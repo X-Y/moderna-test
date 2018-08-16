@@ -1,0 +1,1 @@
+export const mainEndPoint = 'http://modernacodechallenge.azurewebsites.net/api/insurances';

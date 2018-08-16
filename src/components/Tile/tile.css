@@ -1,0 +1,11 @@
+.tile {
+  width: 240px;
+  height: 220px;
+  border: 1px solid grey;
+}
+
+  .tile-img-container {
+    width: 100%;
+    height: 138px;
+    background: blue;
+  }
