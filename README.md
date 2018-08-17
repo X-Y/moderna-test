@@ -1,5 +1,18 @@
 # Moderna Test - by Xun Yang
 
+To run it locally, please use chrome browser and install chrome plugin [allow-control-allow-origin](https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi). Failing to do so will trigger CORS errors and all api requests will fail.
+
+It is recommended to use NodeJS LTS version v8.11.4 
+
+How to run:
+1. Clone the repo to local.
+2. Install dependencies by running `npm install`
+3. Start webpack dev server by `npm start`
+4. In chrome browser, visit localhost:3000 to view the page.
+
+Alternatively, you can create a production build by `npm run build`, and start a server(e.g. [http-server](https://www.npmjs.com/package/http-server)) in build folder to view the production build.
+
+--------
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
