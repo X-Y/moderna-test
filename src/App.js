@@ -1,11 +1,18 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import T from 'prop-types';
+
+import { fetchMainApi } from './redux/actions/api';
 
 import Header from './components/Header/Header';
 import Home from './pages/Home/Home';
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.props.initialRequests();
+  }
   render() {
     return (
       <div className="App">
@@ -14,11 +21,23 @@ class App extends Component {
           <Home />
         </div>
         <footer className='app-footer'>
-          Blabla
         </footer>
       </div>
     );
   }
 }
 
-export default App;
+const mapDispatchToProps = dispatch => {
+  return {
+    initialRequests: fetchMainApi(dispatch)
+  }
+};
+
+App.defaultProps = {
+  initialRequests: () => {}
+};
+App.propTypes = {
+  initialRequests: T.func
+};
+
+export default connect(null, mapDispatchToProps)(App);
